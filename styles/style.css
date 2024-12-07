@@ -10,21 +10,39 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgba(128, 128, 128, 0.8); /* Grey with 80% opacity */
-    color: #fff;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    width: 100vw;
+    box-sizing: border-box; /* Includes padding in width calculation */
+    transition: transform 0.3s ease-in-out; /*slide-in and slide-out effect */
+    z-index: 1000; /* Sstays on top of other elements */
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
-.logo img {
-    height: 50px;
-    width: auto;
+.navbar.hidden {
+    transform: translateY(-100%); /* Slide out of view */
+}
+
+
+.hamb {
+    font-size: 20px;
+}
+
+.right-menu {
+    display: flex;
+}
+
+.right-menu img {
+    height: 30px;
 }
 
 /* Menu Styles */
 .menu {
     display: flex;
+    background-color: rgba(0, 0, 0, 0.6); /* Grey with 80% opacity */
+    padding: 5px 0;
+    border-radius: 15px;
 }
 
 .menu ul {
@@ -35,57 +53,15 @@ body {
     gap: 20px;
 }
 
-.menu ul li {
-    display: inline;
-}
-
 .menu ul li a {
     text-decoration: none;
     color: white;
-    padding: 8px 15px;
+    padding: 5px 15px;
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 4px;
 }
 
 .menu ul li a:hover {
     background-color: #555;
-    color: #ddd;
-}
-
-/* Hamburger Menu Styles */
-.menu-icon {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(128, 128, 128, 0.9);
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 200px;
-        border-radius: 5px;
-    }
-
-    .menu ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .menu ul li {
-        text-align: right;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    .menu.show {
-        display: flex;
-    }
+    border-radius: 15px;
 }
