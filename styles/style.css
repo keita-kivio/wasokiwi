@@ -65,3 +65,8 @@ body {
     background-color: #555;
     border-radius: 15px;
 }
+
+.right-menu img:hover {
+    background-color: rgba(85, 85, 85, 0.7); 
+    border-radius: 15px;
+}
