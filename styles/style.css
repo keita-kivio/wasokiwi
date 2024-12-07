@@ -40,8 +40,7 @@ body {
 /* Menu Styles */
 .menu {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.6); /* Grey with 80% opacity */
-    padding: 5px 0;
+    background-color: rgba(0, 0, 0, 0.6); 
     border-radius: 15px;
 }
 
