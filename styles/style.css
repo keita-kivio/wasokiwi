@@ -2,6 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: aliceblue;
 }
 
 /* Navbar Styles */
@@ -17,7 +18,6 @@ body {
     box-sizing: border-box; /* Includes padding in width calculation */
     transition: transform 0.3s ease-in-out; /*slide-in and slide-out effect */
     z-index: 1000; /* Sstays on top of other elements */
-    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .navbar.hidden {
@@ -70,3 +70,57 @@ body {
     background-color: rgba(85, 85, 85, 0.7); 
     border-radius: 15px;
 }
+
+.dropdown {
+    position: relative; 
+}
+
+.dropbtn {
+    color: white;
+   
+    cursor: pointer; /* Makes the text look clickable */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+    display: inline-block; /* Ensures it's styled like a menu item */
+}
+
+.dropbtn:hover {
+    background-color: #555;
+    border-radius: 15px;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    color:black;
+    display: none; 
+    position: absolute;
+  /*   top: calc(100% + 10px);*/
+    background-color: white; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); 
+    z-index: 2000; 
+    border-radius: 5px; 
+    padding: 10px; 
+}
+
+.dropdown-content a {
+    color: black !important;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+}
+
+.dropdown-content a:hover {
+    background-color:rgba(85, 85, 85, 0.1) !important;
+    border-radius: 4px;
+}
+
+
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block; 
+}
+
+/* -- */
